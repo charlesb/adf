@@ -1,0 +1,16 @@
+{
+	"name": "AzureSqlMI1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlMI",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=chbernard-sqlmi.public.48a05874bfaa.database.windows.net,3342;initial catalog=AdventureWorksDW2019;user id=sqladminuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4QzlBNjcxLTc1QUUtNEUzNy04NzRFLTk0NkZEREUxNEREQ19kZThmZGMzMC1kOGU2LTQ2MWQtYjgzNS0xMDc1ZTc0MDQyOGUiDQp9"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
