@@ -17,7 +17,7 @@
 			"newClusterVersion": "10.4.x-photon-scala2.12",
 			"newClusterInitScripts": [],
 			"clusterOption": "Autoscaling",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4QzlBNjcxLTc1QUUtNEUzNy04NzRFLTk0NkZEREUxNEREQ19kMGFkNzRkMS1iMzRlLTRhOTgtOTVlYS1lNDFiNjU5ZWFjYjYiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4QzlBNjcxLTc1QUUtNEUzNy04NzRFLTk0NkZEREUxNEREQ185NWIyZDRiYy1lOTZlLTRkZDQtODQ1MS01M2ZkYWI2NWQ4MzgiDQp9"
 		},
 		"connectVia": {
 			"referenceName": "AutoResolveIntegrationRuntime",
