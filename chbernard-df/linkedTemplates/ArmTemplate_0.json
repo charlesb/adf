@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
 		"AzureSqlMI1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlMI1'"
@@ -18,10 +22,6 @@
 		"AzureTableStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage1'"
-		},
-		"AzureDatabricks1_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
 		}
 	},
 	"variables": {
@@ -94,6 +94,40 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureDatabricks1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-5662775131040811.11.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"instancePoolId": "spot instances",
+					"newClusterNumOfWorker": "2:4",
+					"newClusterSparkConf": {
+						"spark.databricks.clusterUsageTags.clusterAvailability": "SPOT_WITH_FALLBACK_AZURE"
+					},
+					"newClusterSparkEnvVars": {
+						"spark.databricks.clusterUsageTags.clusterAvailability": "SPOT_WITH_FALLBACK_AZURE"
+					},
+					"newClusterVersion": "10.4.x-photon-scala2.12",
+					"newClusterInitScripts": [],
+					"clusterOption": "Autoscaling"
+				},
+				"connectVia": {
+					"referenceName": "AutoResolveIntegrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureSqlMI1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -121,41 +155,6 @@
 				"type": "AzureTableStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('AzureTableStorage1_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "AutoResolveIntegrationRuntime",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDatabricks1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureDatabricks",
-				"typeProperties": {
-					"domain": "https://adb-5662775131040811.11.azuredatabricks.net",
-					"accessToken": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDatabricks1_accessToken')]"
-					},
-					"newClusterNodeType": "Standard_D4ds_v5",
-					"newClusterNumOfWorker": "1",
-					"newClusterSparkConf": {
-						"spark.databricks.clusterUsageTags.clusterAvailability": "SPOT_WITH_FALLBACK_AZURE"
-					},
-					"newClusterSparkEnvVars": {
-						"spark.databricks.clusterUsageTags.clusterAvailability": "SPOT_WITH_FALLBACK_AZURE"
-					},
-					"newClusterVersion": "10.4.x-photon-scala2.12",
-					"newClusterInitScripts": [],
-					"newClusterDriverNodeType": "Standard_D4ds_v5",
-					"clusterOption": "Fixed"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
