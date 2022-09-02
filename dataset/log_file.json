@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(\n    convertTimeZone(utcnow(), 'UTC', 'Singapore Standard Time', 'yyyyMMdd_HH:mm:ss'),\n    '-',\n    pipeline().Pipeline,\n    '-',\n    pipeline().RunId,\n    '-log'\n    )",
+					"value": "@concat(\n    convertTimeZone(utcnow(), 'UTC', 'Singapore Standard Time', 'yyyyMMdd_HH:mm:ss'),\n    '-',\n    pipeline().Pipeline,\n    '-',\n    pipeline().RunId,\n    '-log.csv'\n    )",
 					"type": "Expression"
 				},
 				"folderPath": "cp_from_shir_demo",
