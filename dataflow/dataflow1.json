@@ -16,14 +16,10 @@
 			"transformations": [
 				{
 					"name": "parse1"
-				},
-				{
-					"name": "compose1"
 				}
 			],
 			"scriptLines": [
-				"compose(composition: 'undefined') ~> compose1@(temporary)",
-				"compose1@temporary parse(format: 'json',",
+				" parse(format: 'json',",
 				"     documentForm: 'documentPerLine') ~> parse1",
 				"parse1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
