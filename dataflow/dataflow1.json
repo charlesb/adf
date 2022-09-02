@@ -3,11 +3,15 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [],
+			"sources": [
+				{
+					"name": "source1"
+				}
+			],
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "log_file",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -19,6 +23,9 @@
 				}
 			],
 			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
 				" parse(format: 'json',",
 				"     documentForm: 'documentPerLine') ~> parse1",
 				"parse1 sink(allowSchemaDrift: true,",
