@@ -25,7 +25,7 @@
 				"compose(composition: 'undefined') ~> compose1@(temporary)",
 				"compose1@temporary parse(format: 'json',",
 				"     documentForm: 'documentPerLine') ~> parse1",
-				"parse1 sink(allowSchemaDrift: false,",
+				"parse1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
