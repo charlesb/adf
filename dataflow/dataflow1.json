@@ -1,0 +1,38 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "parse1"
+				},
+				{
+					"name": "compose1"
+				}
+			],
+			"scriptLines": [
+				"compose(composition: 'undefined') ~> compose1@(temporary)",
+				"compose1@temporary parse(format: 'json',",
+				"     documentForm: 'documentPerLine') ~> parse1",
+				"parse1 sink(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
