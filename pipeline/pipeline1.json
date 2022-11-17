@@ -13,16 +13,12 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Users/chbernard@microsoft.com/test-secret-api"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"timeout_seconds": "30"
-					}
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
