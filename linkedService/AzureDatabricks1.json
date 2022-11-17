@@ -2,12 +2,6 @@
 	"name": "AzureDatabricks1",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"parameters": {
-			"timeout_seconds": {
-				"type": "string",
-				"defaultValue": "30"
-			}
-		},
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
@@ -17,10 +11,17 @@
 			"newClusterSparkEnvVars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
-			"newClusterVersion": "10.4.x-scala2.12",
+			"newClusterCustomTags": {
+				"mykey": {
+					"value": "@(pipeline().Pipeline)",
+					"type": "Expression"
+				}
+			},
+			"newClusterVersion": "11.3.x-scala2.12",
 			"newClusterInitScripts": [],
+			"newClusterDriverNodeType": "Standard_DS3_v2",
 			"clusterOption": "Fixed",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4QzlBNjcxLTc1QUUtNEUzNy04NzRFLTk0NkZEREUxNEREQ183MzRkNTlkMi1lZTAzLTQ5M2ItOGU0Ny0wNDkzY2MwZDJhNTkiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4QzlBNjcxLTc1QUUtNEUzNy04NzRFLTk0NkZEREUxNEREQ19mMGY1ZjdhYS1mNjFkLTRiN2EtYTU4MS0zYjhmOGZmYTZiMmMiDQp9"
 		},
 		"connectVia": {
 			"referenceName": "AutoResolveIntegrationRuntime",
