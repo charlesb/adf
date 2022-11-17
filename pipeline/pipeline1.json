@@ -13,8 +13,17 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [
+					{
+						"name": "myuserprop",
+						"value": "hello2"
+					}
+				],
 				"typeProperties": {
-					"notebookPath": "/Users/chbernard@microsoft.com/test-secret-api"
+					"notebookPath": "/Users/chbernard@microsoft.com/test-secret-api",
+					"baseParameters": {
+						"mykey": "hello"
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
