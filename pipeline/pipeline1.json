@@ -26,6 +26,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"name": {
+				"type": "string",
+				"defaultValue": "mypipleine"
+			}
+		},
 		"annotations": []
 	}
 }
