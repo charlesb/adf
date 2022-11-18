@@ -32,9 +32,15 @@
 			}
 		],
 		"parameters": {
-			"name": {
+			"testparam": {
 				"type": "string",
-				"defaultValue": "mypipleine"
+				"defaultValue": "testparam"
+			}
+		},
+		"variables": {
+			"testvariable": {
+				"type": "String",
+				"defaultValue": "testvariable"
 			}
 		},
 		"annotations": []
