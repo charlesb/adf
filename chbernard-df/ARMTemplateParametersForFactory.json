@@ -16,6 +16,33 @@
 		},
 		"AzureTableStorage1_connectionString": {
 			"value": ""
+		},
+		"OnPremSqlServer_connectionString": {
+			"value": "Integrated Security=True;Data Source=localhost;Initial Catalog=AdventureWorksDW2019"
+		},
+		"OnPremSqlServer_password": {
+			"value": ""
+		},
+		"Sftp1_privateKeyContent": {
+			"value": ""
+		},
+		"Sftp1_passPhrase": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://chbernardstorage01.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://chbernard-kv-01.vault.azure.net/"
+		},
+		"OnPremSqlServer_properties_typeProperties_userName": {
+			"value": "SOUTHPACIFIC\\chbernard"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"value": "20.205.100.213"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"value": "chbernard"
 		}
 	}
 }
