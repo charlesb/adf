@@ -1,0 +1,9 @@
+{
+	"name": "gcc-demo-adf1",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "febfd3cb-c313-4b24-b6a0-e929e96d5267",
+		"tenantId": "acf47e39-a56f-494f-936f-cecc7e125e85"
+	}
+}

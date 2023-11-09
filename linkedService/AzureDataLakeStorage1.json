@@ -1,13 +1,14 @@
 {
 	"name": "AzureDataLakeStorage1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://chbernardstorage01.dfs.core.windows.net/"
+			"url": "https://gccpesa1.dfs.core.windows.net/"
 		},
 		"connectVia": {
-			"referenceName": "AutoResolveIntegrationRuntime",
+			"referenceName": "SHIR1",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
