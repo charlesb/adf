@@ -1,0 +1,34 @@
+{
+	"name": "BankChurnersTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "CLIENTNUM",
+				"type": "varchar"
+			},
+			{
+				"name": "Attrition_Flag",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_Age",
+				"type": "varchar"
+			},
+			{
+				"name": "Gender",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "bank_churners"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

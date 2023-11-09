@@ -1,0 +1,16 @@
+{
+	"name": "AzureSynapseAnalytics1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=gcc-synapse-ws1.sql.azuresynapse.net;initial catalog=ded_sql_pool1;user id=sqladminuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhNDIzZmU5OS05Yzc2LTRjMmMtODM2Mi02NDkyOWJkMjBiOWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SHIR1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
